@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>  
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>     
+var x1In, x2In, y1In, y2In;
+var x1, x2, y1, y2;
+function setup() {
+createCanvas(150,180);
+x1In = createInput('');x1In.position(45,50);x1In.size(20);
+y1In = createInput('');y1In.position(95, 50);y1In.size(20);
+x2In = createInput('');x2In.position(45,100);x2In.size(20);
+y2In = createInput('');y2In.position(95, 100);y2In.size(20);
+}
+function draw(){
+  textFont('futura');background(255);
+  textSize(18);textAlign(CENTER);background(255);
+  fill(50);text("Distance Calculator",75,20);
+  stroke(0,150,255);line(10,30,140,30);line(10,170,140,170);
+  fill(0);textSize(35);
+  text("(    ,    )",75,60);text("(    ,    )",75,110);
+  x1 = x1In.value();x2 = x2In.value();y1 = y1In.value();y2 = y2In.value();
+  textSize(12);text(dist(x1,y1,x2,y2),75,160); 
+}   
+    </script>
+  
+
+</body></html>
